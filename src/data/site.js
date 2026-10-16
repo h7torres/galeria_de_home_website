@@ -1,8 +1,8 @@
 // Everything you'd want to edit lives here.
 // Images still point at your Shopify CDN. To own them fully, download each one,
 // put it in /public/images, and change the URL to "/images/<name>.jpg".
-const SHOP = 'https://galeriadehome.com'
-const CDN = 'https://galeriadehome.com/cdn/shop/files'
+const SHOP = 'https://galeriadehome.myshopify.com'
+const CDN = 'https://cdn.shopify.com/s/files/1/0708/0922/3228/files'
 
 export const hero = {
   image: `${CDN}/Photo_May_12_2026_10_08_28_PM.jpg?v=1778649585&width=3840`,
@@ -25,7 +25,7 @@ export const menu = [
 // Shown top to bottom. A video has either "youtube" (an embed link) or "src" (a video file).
 // "ratio" is width ÷ height, so the space is reserved before the video loads.
 const PREVIEW = `${CDN}/preview_images`
-const VID = 'https://galeriadehome.com/cdn/shop/videos/c/vp'
+const VID = 'https://cdn.shopify.com/videos/c/vp'
 export const videos = [
   {
     title: 'CORRIDOS KETAMINA: INTERVIEW',
