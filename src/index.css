@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/* Fonts and colors taken from the Shopify theme's settings */
+@theme {
+  /* Body font on the live site (used for almost all text) */
+  --font-sans: "SF Mono", Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+  /* Heading font on the live site */
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-menu: "Manrope", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  --font-label: "SF Mono", Menlo, Consolas, Monaco, "Liberation Mono", monospace;
+
+  --color-ink: rgb(0 0 0 / 0.81);   /* body text */
+  --color-heading: #000;            /* headings */
+  --color-hover: #dfdfdf;           /* menu link hover */
+  --color-button-hover: #333;
+}
+
+body {
+  @apply bg-white font-sans text-ink antialiased;
+}
