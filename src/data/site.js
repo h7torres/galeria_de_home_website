@@ -176,8 +176,14 @@ export const gallery = [
 // Each issue is a list of page images, in reading order. Newest issue first.
 const page = (file) => `${CDN}/${file}&width=1200`
 export const magazine = {
-  intro: ['READ PERVIOUS ISSUES BELOW', 'ISSUE #3 OCTOBER'],
+  intro: ['READ PERVIOUS ISSUES BELOW'],
   issues: [
+    // Issue #3, October 2026. These pages live in /public/magazine/issue-3.
+    // To reorder pages, rearrange the numbers below.
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
+      (n) => `/magazine/issue-3/page-${String(n).padStart(2, '0')}.jpeg`,
+    ),
+
     [
       'IMG_5517.jpg?v=1785477453',
       'IMG_5518.jpg?v=1785478259',

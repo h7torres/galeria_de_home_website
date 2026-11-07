@@ -39,15 +39,12 @@ export default function Lightbox({ images, start, onClose }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [index, goTo, onClose])
 
-  // Mouse wheel scrolls sideways.
+  // Vertical scrolling does nothing in the viewer.
   useEffect(() => {
     const track = trackRef.current
     if (!track) return
     const onWheel = (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault()
-        track.scrollBy({ left: e.deltaY, behavior: 'auto' })
-      }
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) e.preventDefault()
     }
     track.addEventListener('wheel', onWheel, { passive: false })
     return () => track.removeEventListener('wheel', onWheel)
