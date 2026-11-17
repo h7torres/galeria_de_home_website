@@ -28,6 +28,12 @@ const PREVIEW = `${CDN}/preview_images`
 const VID = 'https://cdn.shopify.com/videos/c/vp'
 export const videos = [
   {
+    title :'NSQK: CAMP FLOG GNAW INTERVIEW',
+    date : '11/15/26',
+    youtube: 'https://www.youtube.com/embed/2M4Ka-Qm71Y?playlist=2M4Ka-Qm71Y&loop=1',
+    ratio: 16 / 9
+  },
+  {
     title: 'CORRIDOS KETAMINA: INTERVIEW',
     date: '10/1/26',
     youtube: 'https://www.youtube.com/embed/P78gskWdeAg?playlist=P78gskWdeAg&loop=1',
