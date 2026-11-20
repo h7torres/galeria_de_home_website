@@ -179,53 +179,66 @@ export const gallery = [
 ].map((file) => `${CDN}/${file}&width=800`)
 
 // ---------- GDH ARTS MAGAZINE ----------
-// Each issue is a list of page images, in reading order. Newest issue first.
 const page = (file) => `${CDN}/${file}&width=1200`
 export const magazine = {
   intro: ['READ PERVIOUS ISSUES BELOW'],
+  // Each issue has a title, a date, and its pages. Newest issue first .
+  // To hide an issue, comment out its whole { ... } block.
   issues: [
-    // Issue #4, November 2026 (11/19). These pages live in /public/magazine/issue-4.
-    // To reorder pages, rearrange the numbers below.
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
-      (n) => `/magazine/issue-4/page-${String(n).padStart(2, '0')}.jpeg`,
-    ),
-
-    // Issue #3, October 2026. These pages live in /public/magazine/issue-3.
-    // To reorder pages, rearrange the numbers below.
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
-      (n) => `/magazine/issue-3/page-${String(n).padStart(2, '0')}.jpeg`,
-    ),
-
-    [
-      'IMG_5517.jpg?v=1785477453',
-      'IMG_5518.jpg?v=1785478259',
-      'IMG_5519.jpg?v=1785478261',
-      'IMG_5520.jpg?v=1785478263',
-      'IMG_5521.jpg?v=1785478264',
-      'IMG_5522.jpg?v=1785478266',
-      'IMG_5523.jpg?v=1785478268',
-      'IMG_5524.jpg?v=1785478269',
-      'unnamed_028447d3-e27b-45b1-a635-547e2de087df.jpg?v=1785516359',
-      'IMG_5526.jpg?v=1785478448',
-      'IMG_5527.jpg?v=1785478455',
-      'IMG_5528.jpg?v=1785478462',
-      'IMG_5529.jpg?v=1785478469',
-    ].map(page),
-    [
-      'IMG_5538.jpg?v=1785478870',
-      'IMG_9599.jpg?v=1780855017',
-      'IMG_9600.jpg?v=1780855039',
-      'IMG_9601.jpg?v=1780855056',
-      'IMG_9602.jpg?v=1780855305',
-      'IMG_9603.jpg?v=1780855324',
-      'IMG_9604.jpg?v=1780855341',
-      'IMG_9605.jpg?v=1780855362',
-      'unnamed.jpg?v=1780855440',
-      'IMG_9607.jpg?v=1780855380',
-      'IMG_9608.jpg?v=1780855462',
-      'IMG_9610.jpg?v=1780855488',
-      'IMG_5529.jpg?v=1785478469',
-    ].map(page),
+    // {
+    //   title: 'ISSUE #4: CAMP FLOG GNAW SPECIAL',
+    //   date: '11/19/26',
+    //   // These pages live in /public/magazine/issue-4. To reorder pages, rearrange the numbers below.
+    //   pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
+    //     (n) => `/magazine/issue-4/page-${String(n).padStart(2, '0')}.jpeg`,
+    //   ),
+    // },
+    {
+      title: 'ISSUE #3',
+      date: 'OCTOBER 2026',
+      // These pages live in /public/magazine/issue-3. To reorder pages, rearrange the numbers below.
+      pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
+        (n) => `/magazine/issue-3/page-${String(n).padStart(2, '0')}.jpeg`,
+      ),
+    },
+    {
+      title: 'ISSUE #2',
+      date: 'JULY 2026',
+      pages: [
+        'IMG_5517.jpg?v=1785477453',
+        'IMG_5518.jpg?v=1785478259',
+        'IMG_5519.jpg?v=1785478261',
+        'IMG_5520.jpg?v=1785478263',
+        'IMG_5521.jpg?v=1785478264',
+        'IMG_5522.jpg?v=1785478266',
+        'IMG_5523.jpg?v=1785478268',
+        'IMG_5524.jpg?v=1785478269',
+        'unnamed_028447d3-e27b-45b1-a635-547e2de087df.jpg?v=1785516359',
+        'IMG_5526.jpg?v=1785478448',
+        'IMG_5527.jpg?v=1785478455',
+        'IMG_5528.jpg?v=1785478462',
+        'IMG_5529.jpg?v=1785478469',
+      ].map(page),
+    },
+    {
+      title: 'ISSUE #1',
+      date: 'JUNE 2026',
+      pages: [
+        'IMG_5538.jpg?v=1785478870',
+        'IMG_9599.jpg?v=1780855017',
+        'IMG_9600.jpg?v=1780855039',
+        'IMG_9601.jpg?v=1780855056',
+        'IMG_9602.jpg?v=1780855305',
+        'IMG_9603.jpg?v=1780855324',
+        'IMG_9604.jpg?v=1780855341',
+        'IMG_9605.jpg?v=1780855362',
+        'unnamed.jpg?v=1780855440',
+        'IMG_9607.jpg?v=1780855380',
+        'IMG_9608.jpg?v=1780855462',
+        'IMG_9610.jpg?v=1780855488',
+        'IMG_5529.jpg?v=1785478469',
+      ].map(page),
+    },
   ],
 }
 
