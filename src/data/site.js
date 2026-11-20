@@ -184,6 +184,12 @@ const page = (file) => `${CDN}/${file}&width=1200`
 export const magazine = {
   intro: ['READ PERVIOUS ISSUES BELOW'],
   issues: [
+    // Issue #4, November 2026 (11/19). These pages live in /public/magazine/issue-4.
+    // To reorder pages, rearrange the numbers below.
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map(
+      (n) => `/magazine/issue-4/page-${String(n).padStart(2, '0')}.jpeg`,
+    ),
+
     // Issue #3, October 2026. These pages live in /public/magazine/issue-3.
     // To reorder pages, rearrange the numbers below.
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
